@@ -1,45 +1,58 @@
 *{
   margin:0;
   padding:0;
-  box-sizing: border-box;
+  box-sizing: content-box;
   font-family:'poppins',sans-serif
 }
 body{
   background:#000;
   color:#fff;
+  width: 99vw;
+ 
+ 
 }
 .header{
-  width:100%;
-  height:10%;
-  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(images/header-image.png);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+
+  background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.413)),url(images/header-image.png);
   background-size:cover;
   background-position: center;
-  padding:10px 8%;
+ 
 }
 nav{
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:10px 0;
+  padding: 1.5rem;
 }
+.nav-item{
+  list-style-type: none;
+ 
+  text-align: end;
 
+}
 .logo{
   width:150px;
 }
 nav button{
   border:0;
   outline:0;
-  background:white;
+  color: azure;
+  background:rgb(253, 4, 4);
   padding:7px 20px;
-  font-size:12px;
+  font-size:18px;
   border-radius:4px;
   margin-left:10px;
 }
 .language-btn{
+  color: azure;
   display:inline-flex;
   align-items:center;
   background:transparent;
-  border:1px solid #fff;
-  padding:7px 10px;
+  border:1px solid #ffffff;
+  /* padding:7px 10px; */
   
 }
 .language-btn img{
@@ -65,7 +78,7 @@ nav button{
   margin-bottom:20px;
 }
 .email-signup{
-  background:#db0001;
+  background:#ffffff;
   border-radius:4px;
   display:flex;
   align-items:center;
@@ -77,7 +90,7 @@ nav button{
   border:0;
   outline:0;
   margin-left:20px;
-  background-color: #db0001;
+  background-color: #ffffff;
   color: white;
 }
 .email-signup button{
@@ -91,15 +104,15 @@ nav button{
 }
 /* features */
 .features{
-  padding:50px 12%;
+  /* padding:50px 12%; */
   font-size:22px;
 }
 .feature-image{
   display:flex;
-  width:130%;
+  width:100%;
   align-items:center;
   flex-wrap:wrap;
-  padding:50px 0;
+  /* padding:50px 0; */
 }
 .text-column{
   flex-basis:50%;
@@ -108,10 +121,11 @@ nav button{
 .image-column{
   flex-basis:50%;
   margin-bottom:20px;
+
 }
 .image-column img{
   display:block;
-  width:90%;
+  width:100%;
   margin:auto;
 }
 .features h2{
@@ -121,12 +135,14 @@ nav button{
 }
 
 /* faqs */
+
 .faq{
   padding:10px 12%;
   text-align:center;
   font-size:18px;
 }
 .faq h2{
+  text-align: center;
   font-weight:500;
   font-size:40px;
 }
@@ -185,6 +201,8 @@ input[type="radio"]{
   flex-basis:25%;
   flex-grow:1;
   margin-bottom:20px;
+  display: grid;
+  grid-template-columns: repeat(4 , 1fr);
 }
 .footer .col a{
   display:block;
@@ -209,6 +227,7 @@ input[type="radio"]{
   margin-bottom: 10px;;
 }
 /* MEDIA QUERY */
+
 @media only screen and (max-width:600px){
   .logo{
     width:100px;
